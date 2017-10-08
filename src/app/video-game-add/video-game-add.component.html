@@ -1,0 +1,17 @@
+<h1>Add Video Game</h1>
+<form (submit) = "onSubmit()">
+  <div>
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" [(ngModel)]="model.title" />
+  </div>
+  <div>
+    <label for="PublishedOn">Published On</label>
+    <input type="date" name="publishedOn" id="publishedOn" [(ngModel)]="model.publishedOn" />
+  </div>
+  <div>
+    <label for="Platform">Platform</label>
+    <input type="text" name="platform" id="platform" [(ngModel)]="model.platform" />
+  </div>
+  <button type="submit">Add Video Game</button>
+  <pre>{{model | json}}</pre>
+</form>
