@@ -10,7 +10,11 @@
   </div>
   <div>
     <label for="Platform">Platform</label>
-    <input type="text" name="platform" id="platform" [(ngModel)]="model.platform" />
+    <select name="platform" id="platform" [(ngModel)] = "model.platformId">
+      <option value=""></option>
+      <option *ngFor="let platform of platforms"  [value]="platform.id">{{ platform.name }}</option>
+    </select>
+    <!-- <input type="text" name="platform" id="platform" [(ngModel)]="model.platform" /> -->
   </div>
   <button type="submit">Add Video Game</button>
   <pre>{{model | json}}</pre>
